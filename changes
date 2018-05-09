@@ -1,0 +1,15 @@
+How to undo (almost) anything with Git
+ Jun 08, 2015
+jaw6
+jaw6
+One of the most useful features of any version control system is the ability to “undo” your mistakes. In Git, “undo” can mean many slightly different things.
+
+When you make a new commit, Git stores a snapshot of your repository at that specific moment in time; later, you can use Git to go back to an earlier version of your project.
+
+In this post, I’m going to take a look at some common scenarios where you might want to “undo” a change you’ve made and the best way to do it using Git.
+
+
+
+
+
+
