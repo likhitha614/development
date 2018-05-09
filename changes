@@ -23,6 +23,13 @@ This is Git’s safest, most basic “undo” scenario, because it doesn’t alt
 
 
 
+Fix the last commit message
+Scenario: You just typo’d the last commit message, you did git commit -m "Fxies bug #42" but before git push you realized that really should say “Fixes bug #42”.
+
+Undo with: git commit --amend or git commit --amend -m "Fixes bug #42"
+
+What’s happening: git commit --amend will update and replace the most recent commit with a new commit that combines any staged changes with the contents of the previous commit. With nothing currently staged, this just rewrites the previous commit message.
+
 
 
 
