@@ -33,3 +33,14 @@ What’s happening: git commit --amend will update and replace the most recent c
 
 
 
+
+Undo “local” changes
+Scenario: The cat walked across the keyboard and somehow saved the changes, then crashed the editor. You haven’t committed those changes, though. You want to undo everything in that file—just go back to the way it looked in the last commit.
+
+Undo with: git checkout -- <bad filename>
+
+What’s happening: git checkout alters files in the working directory to a state previously known to Git. You could provide a branch name or specific SHA you want to go back to or, by default, Git will assume you want to checkout HEAD, the last commit on the currently-checked-out branch.
+
+Keep in mind: any changes you “undo” this way are really gone. They were never committed, so Git can’t help us recover them later. Be sure you know what you’re throwing away here! (Maybe use git diff to confirm.)
+
+
